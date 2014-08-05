@@ -39,3 +39,42 @@ var timeConvert = function(num) {
 	return hours + ':' + minutes;
 }
 console.log(timeConvert(34), timeConvert(63), timeConvert(134));
+
+
+// Bonus
+// bracketMatcher - Takes in string with brackets and return true if the brackets 
+// are correctly matched otherwise return false
+var bracketMatcher = function (str) {
+	var strList = str.split('');
+	var bracketsList = strList.filter(function (char) {
+		if (char === '(' || char === ')') {
+			return char
+		}
+	})
+	if (bracketsList.length === 0) {
+		return true;
+	};
+	if (bracketsList.length % 2 !== 0) {
+		return false;
+	};
+	if (bracketsList[0] === ')' || bracketsList[bracketsList.length-1] === '(') {
+		return false;
+	};
+	var leftBrackets = bracketsList.filter(function (char) {
+		if (char === '(') {
+			return char;
+		}
+	});
+	var rightBrackets = bracketsList.filter(function (char) {
+		if (char === '(') {
+			return char;
+		}
+	}); 
+	if (leftBrackets.length === rightBrackets.length) {
+		return true;
+	}
+
+}
+console.log(bracketMatcher("(hello (world))"), bracketMatcher("((hello (world))"), 
+	bracketMatcher('hello world'), bracketMatcher("(()())"), 
+	bracketMatcher("((hello (world))"))
