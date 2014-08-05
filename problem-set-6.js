@@ -18,7 +18,7 @@ var secondGreatLow = function(arr) {
 	arrModified.splice(arrModified.indexOf(greatest), 1);
 	arrModified.splice(arrModified.indexOf(lowest),1);
 
-	anwer.push(Math.min.apply(null, arrModified));
+	answer.push(Math.min.apply(null, arrModified));
 	answer.push(Math.max.apply(null, arrModified));
 
 	return answer;
