@@ -73,7 +73,6 @@ var bracketMatcher = function (str) {
 	if (leftBrackets.length === rightBrackets.length) {
 		return true;
 	}
-
 }
 console.log(bracketMatcher("(hello (world))"), bracketMatcher("((hello (world))"), 
 	bracketMatcher('hello world'), bracketMatcher("(()())"), 
