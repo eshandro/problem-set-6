@@ -23,3 +23,19 @@ var secondGreatLow = function(arr) {
 
 	return answer;
 }
+var testList = [ 7,7,12, 98, 106];
+console.log(secondGreatLow(testList))
+
+// Problem 2 
+// timeConvert - take # and returns number of hours and minutes it converts to 
+// 63 -- 1:3
+
+var timeConvert = function(num) {
+	var hours = Math.floor(num/60);
+	var minutes = num % 60;
+	if (minutes < 10) {
+		minutes = '0' + minutes;
+	}
+	return hours + ':' + minutes;
+}
+console.log(timeConvert(34), timeConvert(63), timeConvert(134));
